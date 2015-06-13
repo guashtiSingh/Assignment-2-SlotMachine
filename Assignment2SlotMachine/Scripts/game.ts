@@ -5,6 +5,10 @@
 /// <reference path="typings/soundjs/soundjs.d.ts" />
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
 
+/// <reference path="../config/constants.ts" />
+/// <reference path="../objects/label.ts" />
+/// <reference path="../objects/button.ts" />
+
 
 
 // Game Framework Variables
@@ -60,6 +64,8 @@ var atlas = {
 // Game Variables
 var background: createjs.Bitmap;
 var textureAtlas: createjs.SpriteSheet;
+var spinButton: objects.Button;
+
 
 // Preloader Function
 function preload() {
@@ -111,7 +117,7 @@ function gameLoop() {
 }
 
 // Callback function that allows me to respond to button click events
-function pinkButtonClicked(event: createjs.MouseEvent) {
+function spinButtonClicked(event: createjs.MouseEvent) {
     createjs.Sound.play("clicked");
 }
 
@@ -122,4 +128,11 @@ function main() {
     //Slot machine graphic
     background = new createjs.Bitmap(assets.getResult("background"));
     stage.addChild(background);
+
+    //Add spin button sprite
+    spinButton = new objects.Button("spinButton", 236, 332, false);
+    stage.addChild(spinButton);
+    spinButton.on("click", spinButtonClicked, this);
+
+
 }
