@@ -1,8 +1,10 @@
-﻿/// <reference path="typings/stats/stats.d.ts" />
+﻿
+/// <reference path="typings/stats/stats.d.ts" />
 /// <reference path="typings/easeljs/easeljs.d.ts" />
 /// <reference path="typings/tweenjs/tweenjs.d.ts" />
 /// <reference path="typings/soundjs/soundjs.d.ts" />
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
+
 
 
 // Game Framework Variables
@@ -12,9 +14,48 @@ var stats: Stats;
 
 var assets: createjs.LoadQueue;
 var manifest = [
-    { id: "background", src: "assets/images/slotmachine.png" }
+    { id: "background", src: "assets/images/slotmachine.png" },
     { id: "clicked", src: "assets/audio/clicked.wav" }
 ];
+
+var atlas = {
+
+    "images": [ "assets/images/atlas.png"],
+
+    "frames": [
+        [2, 2, 60, 60, 0, 0, 0],
+        [64, 2, 60, 60, 0, 0, 0],
+        [126, 2, 60, 60, 0, 0, 0],
+        [188, 2, 60, 60, 0, 0, 0],
+        [250, 2, 60, 60, 0, 0, 0],
+        [312, 2, 60, 60, 0, 0, 0],
+        [374, 2, 60, 60, 0, 0, 0],
+        [436, 2, 60, 60, 0, 0, 0],
+        [498, 2, 49, 49, 0, 0, 0],
+        [549, 2, 49, 49, 0, 0, 0],
+        [600, 2, 49, 49, 0, 0, 0],
+        [651, 2, 49, 49, 0, 0, 0],
+        [702, 2, 23, 21, 0, -242, -49]
+    ],
+
+    "animations": {
+        "blankButton": [0],
+        "flower1": [1],
+        "flower2": [2],
+        "flower3": [3],
+        "flower4": [4],
+        "flower5": [5],
+        "flower6": [6],
+        "wild": [7],
+        "betOneButton": [8],
+        "betTenButton": [9],
+        "resetButton": [10],
+        "spinButton": [11],
+        "powerButton": [12]
+    }
+
+}
+
 
 
 // Game Variables
