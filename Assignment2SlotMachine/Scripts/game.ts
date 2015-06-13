@@ -20,7 +20,7 @@ var manifest = [
 
 var atlas = {
 
-    "images": [ "assets/images/atlas.png"],
+    "images": ["assets/images/atlas.png"],
 
     "frames": [
         [2, 2, 60, 60, 0, 0, 0],
@@ -54,12 +54,12 @@ var atlas = {
         "powerButton": [12]
     }
 
-}
-
+};
 
 
 // Game Variables
 var background: createjs.Bitmap;
+var textureAtlas: createjs.SpriteSheet;
 
 // Preloader Function
 function preload() {
@@ -68,6 +68,9 @@ function preload() {
     // event listener triggers when assets are completely loaded
     assets.on("complete", init, this); 
     assets.loadManifest(manifest);
+
+    //Load Texture atlas
+    textureAtlas = new createjs.SpriteSheet(atlas);
     //Setup statistics object
     setupStats();
 }
