@@ -71,11 +71,13 @@
     <Content Include="assets\images\flower5.png" />
     <Content Include="assets\images\flower6.png" />
     <Content Include="assets\images\powerButton.png" />
+    <Content Include="assets\images\resetButton.png" />
     <Content Include="assets\images\slotmachine.png" />
     <Content Include="assets\images\spinButton.png" />
     <Content Include="assets\images\wild.png" />
     <Content Include="config\constants.js" />
     <Content Include="objects\button.js" />
+    <Content Include="objects\jquery.js" />
     <Content Include="objects\label.js" />
     <Content Include="packages.config" />
     <Content Include="assets\images\atlas.json" />
