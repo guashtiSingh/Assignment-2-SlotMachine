@@ -62,7 +62,7 @@
     <Content Include="assets\images\atlas.png" />
     <Content Include="assets\images\betOneButton.png" />
     <Content Include="assets\images\betTenButton.png" />
-    <Content Include="assets\images\blankButton.png" />
+    <Content Include="assets\images\blank.png" />
     <Content Include="assets\images\buttonTemplate.png" />
     <Content Include="assets\images\flower1.png" />
     <Content Include="assets\images\flower2.png" />
